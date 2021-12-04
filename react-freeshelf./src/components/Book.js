@@ -16,7 +16,7 @@ const Book = (props) => {
                 <p>{publisher}</p>
                 <p>{publicationDate}</p>
                 <p>{detailedDescription}</p>
-                <img src={coverImageUrl} alt="Image of Book Cover"/>
+                <img src={coverImageUrl} alt="Book Cover"/>
             </div>) : null}
         </div>
     )
