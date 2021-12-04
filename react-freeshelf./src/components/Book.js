@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Book = (props) => {
-    const { title, author, shortDescription, url, publisher, publicationDate, detailedDescription } = props
+    const { title, author, shortDescription, url, publisher, publicationDate, detailedDescription, coverImageUrl } = props
     const [expanded, setExpanded] = useState(false)
 
     return (
@@ -9,13 +9,14 @@ const Book = (props) => {
             <h1>{title}</h1>
             <h4>{author}</h4>
             <p>{shortDescription}</p>
-            { expanded ? <p onClick={() => setExpanded(false)}>Less Information</p> : <p onClick={() => setExpanded(true)}>More Information</p> }
+            { expanded ? <button onClick={() => setExpanded(false)}>Less Information</button> : <button onClick={() => setExpanded(true)}>More Information</button> }
             { expanded ? 
             (<div>
-                <p>{url}</p>
+                <a href ={url}>{url}</a>
                 <p>{publisher}</p>
                 <p>{publicationDate}</p>
                 <p>{detailedDescription}</p>
+                <img src={coverImageUrl} alt="Image of Book Cover"/>
             </div>) : null}
         </div>
     )
