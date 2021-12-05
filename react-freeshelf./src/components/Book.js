@@ -18,7 +18,7 @@ const Book = (props) => {
                     <img src={coverImageUrl} alt="Book Cover"/>
                 </div>
             </div>
-            { expanded ? <button onClick={() => setExpanded(false)}>Less Information</button> : <button onClick={() => setExpanded(true)}>More Information</button> }
+            { expanded ? <button onClick={() => setExpanded(false)}>>   Less Information</button> : <button onClick={() => setExpanded(true)}>>   More Information</button> }
             { expanded ? 
             (<div className="info">
                 <a href ={url}>{url}</a>

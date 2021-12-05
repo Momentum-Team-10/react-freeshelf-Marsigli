@@ -42,3 +42,10 @@ img {
 .info {
   padding-top: 10px;
 }
+
+button {
+  background-color: white;
+  border: none;
+  font-weight: bold;
+
+}
