@@ -6,17 +6,26 @@ const Book = (props) => {
 
     return (
         <div className="book">
-            <h1>{title}</h1>
-            <h4>{author}</h4>
-            <p>{shortDescription}</p>
+            <div>
+                <h1 className="title">{title}</h1>
+            </div>
+            <div className="container">
+                <div className="left">
+                    <h4>{author}</h4>
+                    <p>{shortDescription}</p>
+                </div>
+                <div className="right">
+                    <img src={coverImageUrl} alt="Book Cover"/>
+                </div>
+            </div>
             { expanded ? <button onClick={() => setExpanded(false)}>Less Information</button> : <button onClick={() => setExpanded(true)}>More Information</button> }
             { expanded ? 
-            (<div>
+            (<div className="info">
                 <a href ={url}>{url}</a>
                 <p>{publisher}</p>
                 <p>{publicationDate}</p>
                 <p>{detailedDescription}</p>
-                <img src={coverImageUrl} alt="Book Cover"/>
+                
             </div>) : null}
         </div>
     )
