@@ -25,7 +25,6 @@ const Book = (props) => {
                 <p>{publisher}</p>
                 <p>{publicationDate}</p>
                 <p>{detailedDescription}</p>
-                
             </div>) : null}
         </div>
     )
